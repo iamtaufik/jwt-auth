@@ -65,7 +65,7 @@ async function authUser(req, res, next) {
   res.cookie('refresh', refreshToken, {
     httpOnly: true,
     sameSite: 'none',
-    secure: false,
+    secure: true,
     expiresIn: 60 * 60 * 1000,
   });
 
